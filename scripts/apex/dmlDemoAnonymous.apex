@@ -8,3 +8,6 @@ DmlDemo.dmlInsertDemo_4();
 DmlDemo.dmlInsertMultiple_right();
 Dmldemo.dmlInsertMultiple_right2();
 DmlDemo.dmlUpdateMultiple_right1();
+
+List<Account> listAccount = [select id from account where createddate = THIS_week];
+delete listAccount;
