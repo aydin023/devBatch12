@@ -1,4 +1,27 @@
 trigger ContactTrigger on Contact (before insert, before update, after insert, after update, after delete, after undelete ) {
+    //Yeni bir Contact mevcut bir Accounta bağlı olarak oluşturulduğunda Contact other phone bağlı olduğu Account phone olsun.
+    /*if (trigger.isBefore && trigger.isInsert) {
+        ContactTriggerHandler12.contactOtherPhone(trigger.new, trigger.old, trigger.oldMap, trigger.newMap);
+    }*/
+    if (trigger.isAfter && trigger.isInsert) {
+        ContactTriggerHandler12.contactOtherPhone2(trigger.new);
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     /*Soru : Yeni bir Contact create edilip bir Accounta bağlandığında, Accounta bağlı bir Contact delete edildiğinde veya Bir Contact update edilerek bir Account ile bağlantısı kesilirse, bir Accounta bağlanırsa ya da bağlantı değişirse Accountta Number_of_Contacts__c fieldi güncellenecek..*/
 
 //Bu islemden etkilenen tum accountlarin id lerini toplamam lazim. Set<id> yapisi icinde toparlayabilrim..
