@@ -1,6 +1,11 @@
 public class ParametreliMetodlar12 {
+
+    public static void welcomeMessage(string nm) {
+        System.debug('hos geldin '+ nm);
+        
+    }
     //metodumuz string bir parametre alsin.Bu metod gelen parametrenin karakter uzunlugunun return etsin.
-    public integer karakterUzunlugu (string text){
+    public static integer karakterUzunlugu (string text){
         integer krktrUzn = text.length();
         return krktrUzn;
 
@@ -8,7 +13,7 @@ public class ParametreliMetodlar12 {
 
     //Metodumuz paramtre olark integer bir deger alsin. Bu integer sayi kac rakamda olsdugunu return etsin.
 
-    public integer rakamSayisi(integer sayi){
+    public static integer rakamSayisi(integer sayi){
         string strSy = string.valueOf(sayi);
         //return strSy.length();
 
@@ -17,17 +22,17 @@ public class ParametreliMetodlar12 {
     }   
 
     //parametre olarak 2 integer deger alsin ve bunlarin toplami return etsin
-    public integer toplama( integer a, integer b){
+    public static integer toplama( integer a, integer b){
         return a+b;
 
     }
 
     //parametre olarak 2 integer alsin ve bunlarin farkini return etsin
-    public integer cikma(integer c, integer d){
+    public static integer cikma(integer c, integer d){
     return c - d;
     }
 
-    public void ucret ( string kitabAdi, decimal fiyat, integer adet){
+    public static void ucret ( string kitabAdi, decimal fiyat, integer adet){
         decimal toplamUcret = fiyat*adet;
         system.debug(kitabAdi + ' kitabindan '+ adet + ' adet aldiniz, odemeniz gereken ucret = '+ toplamUcret + '$');
 

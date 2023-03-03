@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="For Each Batch12">
+        <div class="slds-var-m-around_medium">
+            <strong>Employees</strong>
+        </div>
+        <ul class="slds-var-m-around_medium slds-list_dotted" >
+            <template for:each={contacts} for:item="contact">
+                <li key={contact.id}>
+                    {contact.Name}, {contact.Title}
+                </li>
+            </template>
+        </ul>
+        <hr>
+        <div class="slds-var-m-around_medium ">
+            <strong>Book List</strong>
+        </div>
+        <ol class="slds-var-m-around_medium slds-list_ordered">
+            <template for:each={books} for:item="book">
+                <li key={book}>
+                    {book}
+                </li>
+            </template>
+        </ol>
+    </lightning-card>
+</template>

@@ -1,7 +1,14 @@
 trigger AccountTrigger on Account (before insert, before update, after insert, after update) {
 
     if (Trigger.isBefore) {
+        system.debug('call update description. NOW.');
         AccountTriggerHandler.updateAccountDescription(trigger.new, trigger.old, trigger.newMap, trigger.oldMap);
+        system.debug('called update description. DONE.');
+    }
+    if (Trigger.isAfter && Trigger.isInsert) {
+
+        AccountQueueableExample aq = new AccountQueueableExample(trigger.new);
+        id jobId = system.enqueueJob(aq);
     }
     if (Trigger.isAfter && Trigger.isUpdate) {
         //call method to update VIP fields of all contacts.

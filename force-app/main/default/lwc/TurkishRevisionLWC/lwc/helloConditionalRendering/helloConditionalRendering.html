@@ -1,0 +1,32 @@
+<template>
+    <!-- bir check box inputu olusturalim.. tiklandiginda acilan teplate olsun -->
+    <lightning-card title="Hello ConditionalRendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                type="checkbox"
+                label="Show Detail"
+                onchange={handleChange}>
+            </lightning-input>
+            <template lwc:if={areDetailVisible}>
+                <div class="slds-var-m-around_medium">
+                    <lightning-input 
+                        type="text" 
+                        label="First Name"
+                        onchange={handleChange}>
+                    </lightning-input>
+                    <lightning-input 
+                        type="text" 
+                        label="City Name"
+                        onchange={handleChange}>
+                    </lightning-input>
+                </div>
+                <div class="slds-var-m-around_medium">
+                    These are the details! <br>
+                    I am {firstName} <br>
+                    I am from {location.city}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

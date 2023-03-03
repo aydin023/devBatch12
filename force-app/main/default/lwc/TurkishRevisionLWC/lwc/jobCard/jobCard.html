@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Job ID">
+        <!-- aciklama satiri -->
+        <!-- avatar, firstName, lastName, Job options -->
+        <div class="slds-m-around_medium">
+            <lightning-avatar src="https://thumbs.dreamstime.com/z/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg">
+            </lightning-avatar>
+        <lightning-input
+                type="text"
+                value=""
+                label="First Name"
+                onchange={handleChange}>
+            </lightning-input>
+        <lightning-input
+                type="text"
+                value=""
+                label="Last Name"
+                onchange={handleChange}>
+                
+            </lightning-input>
+        <lightning-combobox
+                label="Job Title"
+                value={role}
+                options={options}
+                onchange={handleChange}>
+                
+            </lightning-combobox>
+        </div>
+        <div class="slds-m-around_medium" >
+            {firstName} {lastName} {role}
+        </div>
+    </lightning-card> 
+</template>

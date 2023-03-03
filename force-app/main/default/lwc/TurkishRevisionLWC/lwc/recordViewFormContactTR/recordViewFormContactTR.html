@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Record View Form - TR" icon-name="standard:apex">
+        <lightning-record-view-form 
+            object-api-name={objectApiName}
+            record-id={recordId}>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-output-field field-name={fields.firstName} style="background-color: blue;"></lightning-output-field>
+                    <lightning-output-field field-name={fields.lastName}></lightning-output-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-output-field field-name={fields.title}></lightning-output-field>
+                    <lightning-output-field field-name={fields.leadSource}></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>
