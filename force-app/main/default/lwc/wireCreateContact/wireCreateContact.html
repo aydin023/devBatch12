@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Create Record - Contact" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <form class="contactForm">
+                <!-- Contact FirstName -->
+                <lightning-input
+                    type="text"
+                    label="First Name"
+                    name="FirstName"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <!-- Contact last name -->
+                <lightning-input
+                    type="text"
+                    label="Last Name"
+                    name="LastName"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <!-- Contact leadSource -->
+                <lightning-combobox
+                    label="Lead Source"
+                    name="LeadSource"
+                    options={leadSourceOptions}
+                    onchange={changeHandler}>
+                </lightning-combobox>
+                <!-- Cancel & Save buttuns -->
+                <div class="slds-align_absolute-center slds-var-m-around_medium">
+                    <lightning-button
+                        variant="destructive" 
+                        label="Cancel" 
+                        title="Destructive action" 
+                        onclick={cancelContact} 
+                        class="slds-var-m-left_x-small">
+                    </lightning-button>
+                    <lightning-button
+                        variant="brand" 
+                        label="Brand"                        
+                        class="slds-var-m-left_x-small" 
+                        onclick={saveContact} >
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Create Record - Employer" icon-name="standard:employee">
+        <div class="slds-var-m-around_medium">
+            <form class="empform">
+                <!-- Employee Name -->
+                <lightning-input
+                            type="text"
+                            label="Employee Name"
+                            name="Employee_Name__c"
+                            onchange={changeHandler}>
+                </lightning-input>
+                <!-- Email -->
+                <lightning-input
+                            type="email"
+                            label="Email"
+                            name="Email__c"
+                            onchange={changeHandler}>
+                </lightning-input>
+                <!-- Designation__c -->
+                <lightning-input
+                            type="text"
+                            label="Designation"
+                            name="Designation__c"
+                            onchange={changeHandler}>
+                </lightning-input>
+                <!-- cancel & save buttons -->
+                <div class="slds-align_absolute-center slds-var-m-top_medium">
+                    <lightning-button
+                            label="Cancel"
+                            variant="neutral"
+                            class="slds-var-m-right_small"
+                            onclick={cancelEmployee}>
+                    </lightning-button>
+                    <lightning-button
+                            label="Save"
+                            variant="brand"
+                            onclick={saveEmployee}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+    
+</template>
